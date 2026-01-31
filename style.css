@@ -1,0 +1,111 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:800px;
+  background-image: url(birthday.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: #FFF4CC;
+  flex-direction: column;
+}
+.balloon-card {
+  display: flex;
+  height: 500px;
+  width: 900px;
+  box-shadow: 0px, 15px, 25px, rgba(57, 91, 155, 0.285);
+  gap: 2px;
+  background: linear-gradient();
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px;
+  background:linear-gradient(#ffefbaa2,#b0c4de51)
+}
+.balloon{
+  background-image: url(balloon.png);
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  /* border: 2px solid black; */
+    animation-name: floatanime;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(1px 1px 15px rgb(4, 4, 67));
+}
+
+.Text{
+  font-size: 40px;
+  padding: 70px 25px 20px 70px;
+  text-shadow: 1px 1px 5px black;
+  color: rgb(255, 251, 251);
+}
+.balloon:nth-child(1){
+  animation-delay: 0.5s;
+}
+.balloon:nth-child(2){
+  animation-delay: 1s;
+}
+.balloon:nth-child(3){
+  animation-delay: 1.5s;
+}
+.balloon:nth-child(4){
+  animation-delay: 2.5s;
+}
+.btn{
+  margin-top: 30px;
+  font-size: 32px;
+  padding: 10px;
+  color: rgb(245, 241, 241);
+  background-color: #d87093;
+  border: none;
+  box-shadow: 5px 5px 10px #d87093;
+  border-radius: 15px;
+  text-decoration: none;
+}
+@keyframes floatanime {
+  0%{
+    translate: 0px;
+  }
+  50%{
+    translate:0px 30px
+  }
+} 
+
+/* Tablets */
+@media (max-width: 900px) {
+  .balloon-card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  img {
+    width: 150px;
+    height: 300px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .balloon-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 120px;
+    height: 250px;
+  }
+
+  .Text {
+    font-size: 40px;
+  }
+}
